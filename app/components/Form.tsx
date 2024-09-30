@@ -72,6 +72,16 @@ const Form = () => {
     setTotalRepayment(null);
     setCalculated(false);
   };
+  const isPositive = (value: string) => {
+    const numericValue = parseFloat(value);
+    return numericValue > 0 || "Interest rate must be positive";
+  };
+  
+  const isValidDecimal = (value: string) => {
+    const isValid = /^(\d+|\d+\.\d+)$/.test(value);
+    return isValid || "Invalid number format";
+  };
+  
 
   return (
     <div className="mx-auto flex flex-col md:flex-row md:p-16">
@@ -150,14 +160,9 @@ const Form = () => {
                   message: "Minimum rate is 0%",
                 },
                 validate: {
-                  positive: (value) => {
-                    const numericValue = parseFloat(value);
-                    return numericValue > 0 || "Interest rate must be positive";
-                  },
-                  decimal: (value) => {
-                    const isValidDecimal = /^(\d+|\d+\.\d+)$/.test(value);
-                    return isValidDecimal || "Invalid number format"; // Utilize the regex directly
-                  },
+                  positive: isPositive,
+                  decimal: isValidDecimal,
+                
                 },
               })}
               type="number"
