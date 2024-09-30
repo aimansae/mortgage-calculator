@@ -5,6 +5,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-lime: hsl(61, 70%, 52%);
+  --color-limeLight: hsl(61, 70%, 81%);
+  --color-red: hsl(4, 69%, 50%);
+  --color-slatea: hsl(202, 86%, 94%);
+  --color-slateb: hsl(203, 41%, 72%);
+  --color-slatec: hsl(200, 26%, 54%);
+  --color-slated: hsl(200, 24%, 40%);
+  --color-slatee: hsl(207.3, 52.4%, 16.5%);
+  --color-slatef: hsl(206.7, 52.9%, 13.3%);
 }
 
 @media (prefers-color-scheme: dark) {
