@@ -98,12 +98,13 @@ const Form = () => {
               className="w-full rounded-md py-2 pl-12 font-bold hover:cursor-pointer focus:outline-none"
             />
           </div>
+          <div className="h-6">
           {errors.amount && (
             <p className="mb-3 font-bold text-customRed">
               {errors.amount?.message}
             </p>
           )}
-
+</div>
           <label htmlFor="years" className="my-2">
             Mortgage Term (Years)
           </label>
@@ -121,15 +122,16 @@ const Form = () => {
               })}
               type="number"
               name="years"
-              className="hover:cursor-pointerw-full rounded-md px-2 py-2 pr-12 font-bold focus:outline-none"
+              className="hover:cursor-pointer w-full rounded-md px-2 py-2 pr-12 font-bold focus:outline-none"
             />
           </div>
+          <div className="h-6">
 
           {errors.years && (
             <p className="mb-3 font-bold text-customRed">
               {errors.years?.message}
             </p>
-          )}
+          )}</div>
 
           <label htmlFor="interestRate" className="my-2">
             Interest Rate
@@ -153,10 +155,8 @@ const Form = () => {
                     return numericValue > 0 || "Interest rate must be positive";
                   },
                   decimal: (value) => {
-                    const numericValue = parseFloat(value);
-                    return (
-                      /^(\d+|\d+\.\d+)$/.test(value) || "Invalid number format"
-                    ); // Validation for decimal values
+                    const isValidDecimal = /^(\d+|\d+\.\d+)$/.test(value);
+                    return isValidDecimal || "Invalid number format"; // Utilize the regex directly
                   },
                 },
               })}
@@ -165,13 +165,14 @@ const Form = () => {
               className="w-full rounded-lg px-2 py-2 pr-12 font-bold hover:cursor-pointer focus:outline-none"
             />
           </div>
+          <div className="h-6">
           {errors.interestRate && (
-            <p className="mb-3 font-bold text-customRed">
+            <p className="font-bold text-customRed">
               {errors.interestRate?.message}
             </p>
-          )}
+          )}</div>
 
-          <label htmlFor="mortgageType" className="">
+          <label htmlFor="mortgageType" >
             Mortgage Type
           </label>
           <div

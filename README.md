@@ -2,6 +2,9 @@
 
 ## This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). It is inspired by[Frontend Mentor](https://www.frontendmentor.io/challenges/mortgage-repayment-calculator-Galx1LXK73)
 
+Please find the live site [here]()
+The Github Repository link can be found [here](https://github.com/aimansae/mortgage-calculator)
+
 ## Getting Started
 
 ## The project is fully responsive, each feature was separated in its own component.
