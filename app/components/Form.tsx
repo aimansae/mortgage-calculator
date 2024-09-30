@@ -73,8 +73,7 @@ const Form = () => {
     setCalculated(false);
   };
   const isPositive = (value: string) => {
-    const numericValue = parseFloat(value);
-    return numericValue > 0 || "Interest rate must be positive";
+    return parseFloat(value) > 0 || "Interest rate must be positive"; 
   };
   
   const isValidDecimal = (value: string) => {
