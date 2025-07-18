@@ -2,8 +2,10 @@
 
 A fully responsive mortgage repayment calculator built using **Next.js**, **React Hook Form**, and **Tailwind CSS**. This app allows users to estimate monthly payments based on loan amount, interest rate, repayment term, and mortgage type.
 
+![Mortgage Calculator Preview](./public/assets/amIResponsive.PNG)
 
-Please find the live site [here](https://mortgage-calculator-cyan.vercel.app/)
+Please find the live site [here](https://mortgage-calculator-cyan.vercel.app/).
+
 The Github Repository link can be found [here](https://github.com/aimansae/mortgage-calculator)
 
 ## Features
